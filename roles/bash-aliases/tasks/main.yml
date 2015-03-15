@@ -1,0 +1,37 @@
+---
+- lineinfile: dest=~/.bash_aliases line="{{ item }}" create=yes
+  with_items:
+    - alias vib='vi ~/.bashrc'
+    - alias viba='vi ~/.bash_aliases'
+    - alias sob='source ~/.bashrc'
+
+    - alias lh='ls -lh'
+    - alias lah='ls -lah'
+    - alias du='du -h'
+    - alias duM='du -sch * | egrep \"^[ ]*[0-9.]+[MG]\"'
+    - alias df='df -h'
+    - alias mv='mv -i'
+    - alias cp='cp -i'
+    - alias pt='py.test -svx'
+
+    - alias t='cd /tmp'
+    - alias l='less -i -R'
+    - alias less='less -i -R'
+
+    - alias acse='apt-cache search'
+    - alias acsh='apt-cache show'
+    - alias agi='sudo apt-get install'
+    - alias agr='sudo apt-get remove'
+    - alias agup='sudo apt-get update'
+    - alias agcl='sudo apt-get clean'
+
+    - alias gst='git status --untracked=no'
+    - alias gstu='git status --untracked=normal'
+    - alias gd='git diff'
+    - alias gdc='git diff --cached'
+    - alias gcom='git commit'
+    - alias gl='git log'
+    - alias gc='git checkout'
+    - alias gcp='git cherry-pick'
+    - alias gui='git update-index'
+    - alias gb='git branch'
