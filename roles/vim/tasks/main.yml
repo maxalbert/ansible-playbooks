@@ -1,0 +1,6 @@
+---
+- apt: pkg=vim
+  sudo: yes
+
+- name: Configure vim
+  template: src=vimrc dest=~/.vimrc
