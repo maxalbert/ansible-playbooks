@@ -10,6 +10,21 @@
       sudo: yes
       with_items:
         - git
+        - python
+        - python-dev
+        - python-pip
+
+    - name: Install Python-related packages
+      pip: name={{ item }}
+      sudo: yes
+      with_items:
+        - pyzmq
+        - tornado
+        - ipython
+        - jsonschema
+        #- numpy
+        #- scipy
+        #- matplotlib
   roles:
     - vim
     - bash-aliases
