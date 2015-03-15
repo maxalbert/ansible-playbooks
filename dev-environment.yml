@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: Update apt cache it if hasn't been updated within the last day.
+    apt: update_cache=yes cache_valid_time=86400
+    sudo: yes
+
+  - name: Install Ubuntu packages
+    apt: pkg={{ item }}
+    sudo: yes
+    with_items:
+      - vim
+      - git
