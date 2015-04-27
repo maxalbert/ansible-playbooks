@@ -1,0 +1,11 @@
+---
+# This may take 10-15 minutes to install
+- name: Install LaTeX-related packages
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - texlive-latex-base
+    - texlive-latex-extra
+    - texlive-latex-recommended
+    - texlive-fonts-recommended
+    - texlive-fonts-extra
