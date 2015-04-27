@@ -1,0 +1,21 @@
+---
+- name: Install packages needed for numpy, matplotlib, etc.
+  apt: pkg={{ item }}
+  sudo: yes
+  with_items:
+    - pkg-config
+    - liblapack-dev
+    - libfreetype6-dev
+    - libpng12-dev
+    - gfortran
+    - lilypond
+
+- name: Install music21 and its prerequisite Python package
+  pip: name={{ item }}
+  sudo: yes
+  with_items:
+    - numpy
+    - scipy
+    - pandas
+    - matplotlib
+    - music21
