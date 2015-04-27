@@ -13,6 +13,8 @@
         - python
         - python-dev
         - python-pip
+        - tmux
+        - pandoc
 
     - name: Install Python-related packages
       pip: name={{ item }}
@@ -20,11 +22,16 @@
       with_items:
         - pyzmq
         - tornado
-        - ipython
+        - ipython[all]
         - jsonschema
+        - pytest
+        - nose
+        - pyflakes
         #- numpy
         #- scipy
         #- matplotlib
   roles:
     - vim
     - bash-aliases
+    - latex
+    - music21
