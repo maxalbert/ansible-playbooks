@@ -8,5 +8,5 @@ if [ "$(whoami)" != "root" ]; then
 fi
 
 sudo apt-get update
-sudo apt-get install python-pip python-dev
+sudo apt-get -y install python-pip python-dev
 sudo pip install -U pip ansible   # upgrade pip, install ansible
