@@ -13,6 +13,7 @@
     - alias mv='mv -i'
     - alias cp='cp -i'
     - alias pt='py.test -svx'
+    - alias p='ipython'
 
     - alias t='cd /tmp'
     - alias l='less -i -R'
